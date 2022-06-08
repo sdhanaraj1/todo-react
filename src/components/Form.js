@@ -35,7 +35,7 @@ function Form(props) {
         value={name}
         onChange={handleChange}
       />
-      <button type="submit" className="btn btn__primary btn__lg">
+      <button data-testid="add_task_button" type="submit" className="btn btn__primary btn__lg">
         Add
       </button>
     </form>

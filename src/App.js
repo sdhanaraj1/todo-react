@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 
 
 function usePrevious(value) {
@@ -81,7 +81,7 @@ function App(props) {
   ));
 
   function addTask(name) {
-    const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
+    const newTask = { id: "todo-" + Math.random(), name: name, completed: false };
     setTasks([...tasks, newTask]);
   }
 

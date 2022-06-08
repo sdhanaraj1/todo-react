@@ -50,6 +50,7 @@ export default function Todo(props) {
       <div className="btn-group">
 
         <button
+          data-testid={props.name + " cancel_btn"}
           type="button"
           className="btn todo-cancel"
           onClick={() => setEditing(false)}
@@ -57,7 +58,7 @@ export default function Todo(props) {
           Cancel
           <span className="visually-hidden">renaming {props.name}</span>
         </button>
-        <button type="submit" className="btn btn__primary todo-edit">
+        <button data-testid={props.name + " save_btn"} type="submit" className="btn btn__primary todo-edit">
           Save
           <span className="visually-hidden">new name for {props.name}</span>
         </button>
@@ -80,6 +81,7 @@ export default function Todo(props) {
         </div>
         <div className="btn-group">
         <button
+          data-testid={props.name + " edit_btn"}
           type="button"
           className="btn"
           onClick={() => setEditing(true)}
@@ -88,6 +90,7 @@ export default function Todo(props) {
             Edit <span className="visually-hidden">{props.name}</span>
           </button>
           <button
+            data-testid={props.name + " del_btn"}
             type="button"
             className="btn btn__danger"
             onClick={() => props.deleteTask(props.id)}
